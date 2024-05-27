@@ -13,7 +13,7 @@ let messageEl = document.querySelector("#message-el");
 let sumEl = document.querySelector(".sum-el");
 let cardsEl = document.querySelector(".cards-el");
 let playerEl = document.querySelector("#player-el");
-playerEl.textContent = playerObj.name + ":" + " " + playerObj.chips;
+playerEl.textContent = playerObj.name + ": $" + playerObj.chips;
 
 function getRandomCard() {
   let randomCard = Math.floor(Math.random() * 13) + 1;

@@ -14,7 +14,11 @@ let startGame = () => {
 };
 
 let renderGame = () => {
-  cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+  cardsEl.textContent = "Cards: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl += cards[i];
+  }
+
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     message = "Get another card 😀";
@@ -32,6 +36,7 @@ let renderGame = () => {
 let newCard = () => {
   let thirdCard = 8;
   sum += thirdCard;
-  cards.push(sum);
+  cards.push(thirdCard);
+  console.log(cards);
   renderGame();
 };
